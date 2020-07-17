@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".AboutUs">
+
+    <ScrollView
+        android:id="@+id/AboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#000000"
+                android:text="APP Designed and Developed by:  Prathamesh G Jadhav \n\n socia media links:"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/instagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="\t@tech_lover_prathm"
+                android:textAlignment="center"
+                android:textColor="@color/Selected"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#000000"
+                android:text="Data Collected \nby: Vaibhav Kulkarni  \n\nsocia media links:"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/instagram2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="\t@Vaibhav Kulkarni"
+
+                android:textAlignment="center"
+                android:textColor="@color/Selected"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Credits:Special thanks to for  providing beautiful loader:"
+                android:textColor="@color/White"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/ultimate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="\t@UltiimateHive .com"
+                android:textColor="@color/Selected"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Also thanks to all testers who cheked application and sugested "
+                android:textColor="@color/White"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

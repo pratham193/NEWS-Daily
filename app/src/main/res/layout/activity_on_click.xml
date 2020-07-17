@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".OnClick">
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_baseline_home_24"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/texttitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#121212"
+                android:gravity="center"
+
+                android:paddingStart="5dp"
+                android:text="Loading..."
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+            <ImageButton
+                android:id="@+id/Share"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/share"
+                android:foregroundGravity="center_vertical"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingTop="3dp" />
+
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ic_baseline_refresh_24"
+                android:scaleType="centerInside" />
+
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="-9dp"
+            android:progress="20"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <WebView
+        android:id="@+id/Webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:layout_below="@id/ll"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="-24dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/noInternetConnectionLogo"
+            android:layout_width="338dp"
+            android:layout_height="331dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/no_internet" />
+
+        <TextView
+            android:id="@+id/txtNoConnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noInternetConnectionLogo"
+            android:text="No Internet Connection"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNoConnection"
+            android:layout_width="140dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/txtNoConnection"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border"
+            android:text="Retry"
+            android:textColor="@color/White"
+            android:textSize="22sp" />
+
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Loadmain">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/load"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/load"
+
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's your Internet Connection\n not App"
+        android:textColor="#E53935"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/load"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:background="#000000"
+        android:textAlignment="center"/>
+</RelativeLayout>
+
+
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4086734586547743/7283447353"/>
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:padding="5dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#05000000"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:background="#121212"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="62dp"
+                        android:autoText="false"
+                        android:background="#121212"
+                        android:freezesText="false"
+                        android:padding="10dp"
+                        android:text="NEWS-Daily"
+                        android:textColor="#C4FFFFFF"
+                        android:textIsSelectable="false"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/mShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/share"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:background="#121212"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Papers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#121212"
+                    android:text="Papers"
+                    android:textAllCaps="false"
+                    android:singleLine="false"
+                    android:textColor="#25ccf7"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/LiveChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:singleLine="false"
+                    android:background="#121212"
+                    android:text="LIVE Channels"
+                    android:textColor="#716868"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/portals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:singleLine="false"
+                    android:layout_weight="1"
+                    android:background="#121212"
+                    android:text="Web Portals"
+                    android:textColor="#716868"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/languagesMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cv"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:id="@+id/English"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="ENGLISH"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVenglish"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/Hindi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="HINDI"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVhindi"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Kannada"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="KANNADA"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVkannada"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Marathi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="MARATHI"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVmarathi"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Telagu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="TELUGU"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVtelagu"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Tamil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="TAMIL"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVtamil"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/Malayalam"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="MALAYALAM"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVmalayalam"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/International"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:text="INTERNATIONAL"
+                android:textAlignment="center"
+                android:textColor="#C4FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVinternational"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#63ACA9A9"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/webportals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cv" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+
+            android:animateLayoutChanges="false"
+            app:fab_addButtonColorNormal="@color/Selected"
+            app:fab_addButtonColorPressed="@color/colorPrimary"
+            app:fab_addButtonPlusIconColor="@color/colorPrimaryDark"
+            app:fab_labelStyle="@style/customFab">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#121212"
+                app:fab_colorPressed="@color/Grey"
+                app:fab_icon="@drawable/about_us"
+                app:fab_size="mini"
+                app:fab_title="AboutUs" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#121212"
+                app:fab_colorPressed="@color/Grey"
+                app:fab_icon="@drawable/inform"
+                app:fab_size="mini"
+                app:fab_title="Report Bug" />
+
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabsuggetions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#121212"
+                app:fab_colorPressed="@color/Grey"
+                app:fab_icon="@drawable/suggetions"
+                app:fab_size="mini"
+                app:fab_title="Suggestions" />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabsuggestPapers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#121212"
+                app:fab_colorPressed="@color/Grey"
+                app:fab_icon="@drawable/add"
+                app:fab_size="mini"
+                app:fab_title="Suggest Papers/Channels" />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabRateUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#121212"
+                app:fab_colorPressed="@color/Grey"
+                app:fab_icon="@drawable/rateus"
+                app:fab_size="mini"
+                app:fab_title="Rate US" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
